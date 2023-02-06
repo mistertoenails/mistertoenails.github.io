@@ -168,3 +168,11 @@ function sayHello() {
   console.log("hello");
   appendConsole("Hello there!");
 }
+const Http = new XMLHttpRequest();
+const url = "https://uclapi.mistertoenails.repl.co/";
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText);
+};
